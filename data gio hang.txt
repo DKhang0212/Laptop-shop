@@ -1,0 +1,38 @@
+async --> load bất đồng bộ
+
+SanPham
+	SanPhamID
+
+NguoiDung
+	NguoiDungID
+	
+DonHang
+	DonHangID
+	NguoiDungID
+	
+DonHangChiTiet
+	SanPhamID (PK) 
+	DonHangID (PK)
+		//Row1: SanPhamID=1;DonHangID=1
+		//Row1: SanPhamID=2;DonHangID=1
+	
+
+Đơn hàng:
+	- Thông tin người đặt hàng
+	- Danh sách sản phẩm
+		- Tên / Số lượng đặt / Ma4SP / Đơn giá
+
+Giỏ hàng
+	- Danh sách sản phẩm mà người dùng chọn
+		session của nodejs: [
+			{name, id, dongia},
+			{name, id, dongia},
+			{name, id, dongia},
+		]
+		
+Màn hình thanh toán
+	User đặt hàng:
+		call session của nodejs --> Lấy mảng trong session
+		--> loop array --> lưu query mySQL
+
+	

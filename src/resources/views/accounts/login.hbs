@@ -1,0 +1,33 @@
+<div class="login-page">
+    {{> userAccount}}
+    <div class="login-panel-container">
+        <div class="login-panel-img-container">
+            <img src="/assets/laptopshop_logo.jpg" alt="Laptop shop logo">
+        </div>
+        <form method="POST" action="/login" class="account-form" id="login-form">
+            {{!-- Username --}}
+            <div class="form-group mt-4">
+                <div class="edit-group">
+                    <input type="text" style="background-color:white!important" class="form-input form-control" id="username" name="username" placeholder=" " required>
+                    <label  class="information-heading" for="username">Tên đăng nhập</label>
+                </div>
+            </div>
+
+            {{!-- Password --}}
+            <div class="form-group mt-4">
+                <div class="edit-group">
+                    <input type="password" class="form-input form-control pass0" id="password" name="password" placeholder=" " required>
+                    <label class="information-heading" for="password">Nhập mật khẩu</label>
+                </div>
+            </div>
+
+            <div className="form-group mt-4">
+                <label class="fail-message">{{message}}</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Đăng nhập</button>
+
+        </form>
+    </div>
+</div>
+{{> footer}}
